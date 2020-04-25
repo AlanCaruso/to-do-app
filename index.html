@@ -1,31 +1,52 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>toDoList</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>to-do-list</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/c548b23906.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="main">
-      <h1>TO-DO LIST</h1>
+      <h1>TO - DO LIST</h1>
       <form class="" action="index.html" method="post">
-        <input type="text" placeholder="new task" name="task">
-        <button  type="submit"><strong>ADD</strong></button>
+        <input type="text" placeholder="new task..." name="task" />
+        <button type="submit">+</button>
       </form>
       <div class="tasksBoard">
         <ul>
-          <li><span class="delete">×</span><input type="checkbox"><label>Vanilla JavaScript</label></li>
-          <li><span class="delete">×</span><input type="checkbox"><label>Vue.js</label></li>
-          <li><span class="delete">×</span><input type="checkbox"><label>React.js</label></li>
-          <li><span class="delete">×</span><input type="checkbox"><label>Node.js</label></li>
+          <li>
+            <div class="custom-control custom-checkbox checkbox-lg">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="customCheck1"
+              />
+              <label class="custom-control-label" for="customCheck1"
+                >Test</label
+              >
+              <span class="delete"><i class="far fa-trash-alt"></i></span>
+            </div>
+          </li>
         </ul>
         <a id="clear">Clear</a>
       </div>
     </div>
     <script type="text/javascript" src="app.js"></script>
   </body>
-  
 </html>
-❤

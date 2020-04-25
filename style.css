@@ -1,0 +1,110 @@
+html {
+  height: 100%;
+  background-image: linear-gradient(#616dff38, #7681ff73);
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  color: #0f222d;
+  background-size: auto;
+  font-size: 14px;
+}
+body {
+  background: transparent !important;
+}
+.main {
+  width: 400px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  font-weight: 100;
+}
+form {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+input[type="text"] {
+  width: 310px;
+  height: 30px;
+  outline: 0;
+  border: none;
+  font-size: 1em;
+  background: #fff;
+  color: #2f4f4f;
+}
+button {
+  font-size: 1.7em;
+  color: black;
+  background-color: transparent;
+  outline: 0;
+  border: none;
+  float: right;
+  padding: 0px 5px 0 5px;
+  line-height: 1;
+}
+.tasksBoard {
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 15px;
+  /*display: none;*/
+  border-radius: 10px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  border-bottom: 1px solid black;
+  padding-bottom: 15px;
+  padding-top: 0px;
+  font-size: 1em;
+  color: #2f4f4f;
+}
+a {
+  float: right;
+  text-align: right;
+  color: #ff6161;
+  font-size: 1em;
+  cursor: pointer;
+}
+.delete {
+  background-color: transparent;
+  padding: 10px 0 0 0px;
+  color: black;
+  cursor: pointer;
+  float: right;
+}
+
+.checkbox-lg .custom-control-label::before,
+.checkbox-lg .custom-control-label::after {
+  top: 0.8rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  cursor: pointer;
+}
+
+.checkbox-lg .custom-control-label {
+  padding-top: 13px;
+  padding-left: 6px;
+  padding: 10px 0 0px 10px;
+}
+button:focus {
+  outline: 0;
+}
+@media (max-width: 500px) {
+  .main {
+    margin: auto;
+    width: 100%;
+  }
+  input[type="text"] {
+    width: 80%;
+  }
+  button {
+    width: 10%;
+  }
+}
