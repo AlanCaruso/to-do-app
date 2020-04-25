@@ -25,8 +25,13 @@
     <div class="main">
       <h1>TO - DO LIST</h1>
       <form class="" action="index.html" method="post">
-        <input type="text" placeholder="new task..." name="task" />
-        <button type="submit">+</button>
+        <input
+          class="add-item-input"
+          type="text"
+          placeholder="new task..."
+          name="task"
+        />
+        <button onclick="addItem()" class="add-item" type="submit">+</button>
       </form>
       <div class="tasksBoard">
         <ul>
@@ -47,6 +52,20 @@
         <a id="clear">Clear</a>
       </div>
     </div>
-    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript">
+      //Selecting elements
+      var input = document.querySelector("input[type = 'text']");
+      var ul = document.querySelector("ul");
+
+      function addItem() {
+        var li = document.createElement("li");
+        var divElement = document.createElement("div");
+
+        var newTodo = this.value;
+        this.value = " ";
+
+        ul.appendChild(li).append(divElement, newTodo);
+      }
+    </script>
   </body>
 </html>
