@@ -7,9 +7,11 @@ html {
   background-size: auto;
   font-size: 14px;
 }
+
 body {
   background: transparent !important;
 }
+
 .main {
   width: 400px;
   height: 500px;
@@ -18,16 +20,19 @@ body {
   flex-direction: column;
   margin: auto;
 }
+
 h1 {
   text-align: center;
   color: #fff;
   font-weight: 100;
 }
+
 form {
   background-color: #fff;
   padding: 15px;
   border-radius: 10px;
 }
+
 input[type="text"] {
   width: 310px;
   height: 30px;
@@ -37,6 +42,7 @@ input[type="text"] {
   background: #fff;
   color: #2f4f4f;
 }
+
 button {
   font-size: 1.7em;
   color: black;
@@ -47,17 +53,20 @@ button {
   padding: 0px 5px 0 5px;
   line-height: 1;
 }
-.tasksBoard {
+
+.task-board {
   background-color: #fff;
   margin-top: 20px;
   padding: 15px;
   /*display: none;*/
   border-radius: 10px;
 }
+
 ul {
   list-style: none;
   padding: 0;
 }
+
 li {
   border-bottom: 1px solid black;
   padding-bottom: 15px;
@@ -65,6 +74,7 @@ li {
   font-size: 1em;
   color: #2f4f4f;
 }
+
 a {
   float: right;
   text-align: right;
@@ -72,6 +82,7 @@ a {
   font-size: 1em;
   cursor: pointer;
 }
+
 .delete {
   background-color: transparent;
   padding: 10px 0 0 0px;
@@ -93,17 +104,21 @@ a {
   padding-left: 6px;
   padding: 10px 0 0px 10px;
 }
+
 button:focus {
   outline: 0;
 }
+
 @media (max-width: 500px) {
   .main {
     margin: auto;
     width: 100%;
   }
+
   input[type="text"] {
     width: 80%;
   }
+
   button {
     width: 10%;
   }
