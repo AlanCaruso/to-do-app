@@ -5,6 +5,7 @@ body {
   color: #0f222d;
   background-size: auto;
   font-size: 14px;
+  height: 100vh;
 }
 
 .main {
@@ -61,6 +62,9 @@ button {
   padding: 15px;
   /*display: none;*/
   border-radius: 10px;
+  height: auto;
+  max-height: 300px;
+  overflow: auto;
 }
 
 ul {
