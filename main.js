@@ -11,7 +11,7 @@ function addTask(task) {
             <span class="delete-button"><i class="far fa-trash-alt"></i></span>
         </li>
     `
-    list.insertAdjacentHTML("beforeend", element);
+    list.insertAdjacentHTML("afterbegin", element);
 }
 
 button.addEventListener("click", () => {
@@ -28,7 +28,7 @@ document.addEventListener('keyup', function (event) {
     if (event.key == 'Enter') {
         noData.classList.add("d-none");
         const task = input.value
-        console.log(task)
+
         if (task) {
             addTask(task)
         }
