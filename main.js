@@ -3,12 +3,12 @@ const button = document.querySelector(".add-item");
 const input = document.querySelector(".add-item-input");
 const noData = document.querySelector(".no-data")
 
-function addTask(task) {
+function addTask(task, done, id) {
     const element = `
         <li class="task">
             <input type="checkbox" />
             <p>${task}</p>
-            <span class="delete-button"><i class="far fa-trash-alt"></i></span>
+            <span class="delete-button disabled"><i class="far fa-trash-alt"></i></span>
         </li>
     `
     list.insertAdjacentHTML("afterbegin", element);

@@ -116,3 +116,8 @@ button:focus {
 .d-none {
   display: none;
 }
+
+.disabled {
+  cursor: not-allowed;
+  color: grey;
+}
