@@ -37,8 +37,6 @@ function taskDeleted(element) {
 }
 
 button.addEventListener("click", () => {
-    noData.classList.add("d-none");
-
     const task = input.value
     console.log(task)
     if (task) {
