@@ -143,4 +143,8 @@ button:focus {
   text-decoration: line-through;
 }
 
-@media(max-width: 600px) {}
+@media(max-width: 400px) {
+  .new-task input {
+    width: 80%;
+  }
+}
