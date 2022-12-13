@@ -32,6 +32,12 @@ function taskDone(element) {
     element.parentNode.querySelector('.text').classList.toggle(lineTrough);
 
 }
+function taskDeleted(element) {
+    if (!element) {
+        alert("dasdasd")
+    }
+    element.parentNode.parentNode.removeChild(element.parentNode)
+}
 
 button.addEventListener("click", () => {
     noData.classList.add("d-none");
@@ -64,6 +70,6 @@ list.addEventListener('click', function (event) {
     if (elementData === "done") {
         taskDone(element);
     } else if (elementData === "deleted") {
-        taskDeleted()
+        taskDeleted(element)
     }
 })
