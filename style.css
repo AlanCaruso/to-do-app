@@ -40,7 +40,7 @@ h2 {
   margin-top: 10px;
 }
 
-input {
+.add-item-input {
   outline: 0;
   border: none;
   font-size: 1em;
@@ -81,13 +81,18 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 
-.task input {
-  width: 20px;
-  height: 20px;
+.checkbox {
+  font-size: 20px;
   cursor: pointer;
-  margin: 0;
+  transition: 0.2s all;
+}
+
+.check-color {
+  color: #1be6c1;
+  transition: 0.2s all;
 }
 
 a {
@@ -120,4 +125,8 @@ button:focus {
 .disabled {
   cursor: not-allowed;
   color: grey;
+}
+
+.line-trough {
+  text-decoration: line-through;
 }
