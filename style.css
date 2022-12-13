@@ -11,7 +11,7 @@ body {
 }
 
 .main {
-  width: 400px;
+  width: 500px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -31,6 +31,7 @@ h2 {
   color: grey;
   font-weight: 100;
   font-size: 14px;
+
 }
 
 .new-task {
@@ -38,6 +39,10 @@ h2 {
   padding: 15px;
   border-radius: 10px;
   margin-top: 10px;
+}
+
+.new-task input {
+  width: 90%;
 }
 
 .add-item-input {
@@ -60,10 +65,14 @@ button {
 }
 
 #task-board {
+  max-height: 300px;
+  overflow: auto;
+}
+
+.board-container {
   background-color: #fff;
   margin-top: 20px;
   padding: 15px;
-  /*display: none;*/
   border-radius: 10px;
   max-height: 300px;
   overflow: auto;
@@ -111,6 +120,7 @@ a {
   cursor: pointer;
   margin: 0;
   padding-right: 5px;
+
 }
 
 

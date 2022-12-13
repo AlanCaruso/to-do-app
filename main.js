@@ -1,7 +1,6 @@
 const list = document.querySelector("#task-board")
 const button = document.querySelector(".add-item");
 const input = document.querySelector(".add-item-input");
-const noData = document.querySelector(".no-data");
 
 const check = 'fa-check-square';
 const checkColor = 'check-color'
@@ -33,9 +32,7 @@ function taskDone(element) {
 
 }
 function taskDeleted(element) {
-    if (!element) {
-        alert("dasdasd")
-    }
+
     element.parentNode.parentNode.removeChild(element.parentNode)
 }
 
@@ -53,7 +50,6 @@ button.addEventListener("click", () => {
 
 document.addEventListener('keyup', function (event) {
     if (event.key == 'Enter') {
-        noData.classList.add("d-none");
         const task = input.value
 
         if (task) {
@@ -72,4 +68,6 @@ list.addEventListener('click', function (event) {
     } else if (elementData === "deleted") {
         taskDeleted(element)
     }
+
+
 })
