@@ -11,7 +11,8 @@ body {
 }
 
 .main {
-  width: 500px;
+  width: 90%;
+  max-width: 550px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -62,6 +63,7 @@ button {
   float: right;
   padding: 0px 5px 0 5px;
   line-height: 1;
+  cursor: pointer;
 }
 
 #task-board {
@@ -140,3 +142,5 @@ button:focus {
 .line-trough {
   text-decoration: line-through;
 }
+
+@media(max-width: 600px) {}
