@@ -7,6 +7,7 @@ const checkColor = 'check-color'
 const uncheck = 'fa-square';
 const lineTrough = 'line-trough';
 let id = 0;
+let LIST = []
 
 function addTask(task, id, done, deleted) {
     if (deleted) { return }
@@ -29,18 +30,25 @@ function taskDone(element) {
     element.classList.toggle(uncheck)
     element.classList.toggle(checkColor)
     element.parentNode.querySelector('.text').classList.toggle(lineTrough);
+    LIST[element.id].done = LIST[element.id].done ? false : true
 
 }
 function taskDeleted(element) {
-
     element.parentNode.parentNode.removeChild(element.parentNode)
+    LIST[element.id].deleted = true
 }
 
 button.addEventListener("click", () => {
     const task = input.value
-    console.log(task)
+
     if (task) {
         addTask(task, id, false, false)
+        LIST.push({
+            name: task,
+            id: id,
+            done: false,
+            deleted: false,
+        })
     }
     input.value = ''
     id++
@@ -52,6 +60,12 @@ document.addEventListener('keyup', function (event) {
 
         if (task) {
             addTask(task, id, false, false)
+            LIST.push({
+                name: task,
+                id: id,
+                done: false,
+                deleted: false,
+            })
         }
         input.value = ''
         id++
