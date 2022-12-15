@@ -17,7 +17,7 @@ body {
   justify-content: center;
   flex-direction: column;
   margin: auto;
-  padding-top: 50px;
+  padding-top: 20px;
 
 }
 
@@ -32,7 +32,22 @@ h2 {
   color: grey;
   font-weight: 100;
   font-size: 14px;
+  padding: 10px 0 10px 0;
 
+}
+
+.board-container {
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 0 0 15px 0;
+  border-radius: 10px;
+  max-height: 400px;
+}
+
+#task-board {
+  max-height: 300px;
+  overflow: auto;
+  padding: 0px 25px 0 25px;
 }
 
 .new-task {
@@ -66,19 +81,6 @@ button {
   cursor: pointer;
 }
 
-#task-board {
-  max-height: 300px;
-  overflow: auto;
-}
-
-.board-container {
-  background-color: #fff;
-  margin-top: 20px;
-  padding: 15px;
-  border-radius: 10px;
-  max-height: 300px;
-  overflow: auto;
-}
 
 ul {
   list-style: none;
@@ -141,6 +143,10 @@ button:focus {
 
 .line-trough {
   text-decoration: line-through;
+}
+
+#clear {
+  padding-right: 25px;
 }
 
 @media(max-width: 400px) {
