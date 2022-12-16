@@ -4,6 +4,13 @@
 <head>
   <meta charset="utf-8" />
   <title>to-do-list</title>
+  <meta property='og:title' content='Lista de tareas' />
+  <meta property='og:image' content='https://iili.io/Hor4MxV.png' />
+  <meta property='og:description' content='De la libreria web de componentes y diseños' />
+  <meta property='og:url' content='https://alancaruso.github.io/pages/todo-app#es' />
+  <meta property='og:image:width' content='850' />
+  <meta property='og:image:height' content='850' />
+  <meta property="og:type" content='website' />
   <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -15,13 +22,17 @@
 
 <body>
   <div class="main">
-    <h1>TO - DO LIST</h1>
+    <div class="language-menu">
+      <a href="#eng" data-reload>English</a>
+      <a href="#es" data-reload>Español</a>
+    </div>
+    <h1 id="title">To Do List</h1>
     <div class="new-task">
-      <input class="add-item-input" type="text" placeholder="new task..." name="task" />
+      <input id="input" class="add-item-input" type="text" placeholder="new task..." name="task" />
       <button class="add-item" type="submit">+</button>
     </div>
     <div class="board-container">
-      <h2>Here are your tasks</h2>
+      <h2 id="board">Here are your tasks</h2>
       <ul id="task-board">
 
       </ul>

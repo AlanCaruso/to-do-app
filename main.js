@@ -2,6 +2,7 @@ const list = document.querySelector("#task-board")
 const button = document.querySelector(".add-item");
 const input = document.querySelector(".add-item-input");
 const deleteAll = document.querySelector("#clear");
+const dataReload = document.querySelectorAll("[data-reload]");
 
 const check = 'fa-check-square';
 const checkColor = 'check-color'
@@ -9,6 +10,21 @@ const uncheck = 'fa-square';
 const lineTrough = 'line-trough';
 let id;
 let LIST;
+
+const language = {
+    eng: {
+        title: "To Do List",
+        taskBoardTitle: "Here are your tasks",
+        clear: "Clear",
+        input: "new task..."
+    },
+    es: {
+        title: "Lista de tareas",
+        taskBoardTitle: "Estas son tus tareas",
+        clear: "Vaciar",
+        input: "nueva tarea..."
+    }
+}
 
 function addTask(task, id, done, deleted) {
     if (deleted) { return }
@@ -19,7 +35,7 @@ function addTask(task, id, done, deleted) {
     const element = `
         <li class="task">
             <i class="checkbox fa-regular ${DONE} ${COLOR}" data="done" id="${id}"></i>
-            <p class="text ${LINE}">${task}</p>
+            <p class="${LINE} task-text">${task}</p>
             <i class="far fa-trash-alt delete-button" data="deleted" id="${id}"></i>
         </li>
     `
@@ -31,7 +47,7 @@ function taskDone(element) {
     element.classList.toggle(check)
     element.classList.toggle(uncheck)
     element.classList.toggle(checkColor)
-    element.parentNode.querySelector('.text').classList.toggle(lineTrough);
+    element.parentNode.querySelector('.task-text').classList.toggle(lineTrough);
     LIST[element.id].done = LIST[element.id].done ? false : true
 
 }
@@ -99,6 +115,7 @@ deleteAll.addEventListener('click', function () {
 
 })
 
+
 let data = localStorage.getItem('TODO')
 
 if (data) {
@@ -118,3 +135,28 @@ function loadList(data) {
         addTask(i.name, i.id, i.done, i.deleted)
     });
 }
+
+
+if (window.location.hash) {
+    if (window.location.hash === "#es") {
+        title.textContent = language.es.title
+        board.textContent = language.es.taskBoardTitle
+        clear.textContent = language.es.clear
+        input.placeholder = language.es.input
+    }
+
+}
+
+for (i = 0; i <= dataReload.length; i++) {
+
+    dataReload[i].onclick = function () {
+        setTimeout(function () {
+            location.reload(true)
+        }, 200)
+
+
+
+    }
+
+}
+

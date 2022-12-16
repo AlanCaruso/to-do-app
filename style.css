@@ -1,6 +1,5 @@
 body {
-  background-image: linear-gradient(#616dff38, #7681ff73);
-  background-repeat: no-repeat;
+  background-image: linear-gradient(to top, #c3eefe 0%, #AEB9FF 100%);
   font-family: "Poppins", sans-serif;
   color: #0f222d;
   background-size: auto;
@@ -29,7 +28,7 @@ h1 {
 
 h2 {
   text-align: center;
-  color: grey;
+  color: black;
   font-weight: 100;
   font-size: 14px;
   padding: 10px 0 10px 0;
@@ -66,8 +65,9 @@ h2 {
   border: none;
   font-size: 1em;
   background: #fff;
-  color: #2f4f4f;
+  color: black;
 }
+
 
 button {
   font-size: 1.7em;
@@ -108,7 +108,7 @@ ul {
   transition: 0.2s all;
 }
 
-a {
+#clear {
   float: right;
   text-align: right;
   color: #ff6161;
@@ -147,6 +147,17 @@ button:focus {
 
 #clear {
   padding-right: 25px;
+}
+
+.language-menu {
+  display: flex;
+  margin-left: auto;
+}
+
+.language-menu a {
+  padding-left: 10px;
+  text-decoration: none;
+  color: white;
 }
 
 @media(max-width: 400px) {
